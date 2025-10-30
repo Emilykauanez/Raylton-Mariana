@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Ano de Namoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>01/11/2024</h1>
+        <h1>Raylton & Mariana</h1>
+        <h1>Um Ano de Nós ❤️</h1>
+        <p> Clique abaixo para reviver nossos momentos especiais. </p>
+        <a href="/fotos/primeira.html" class="btn"> Ver nossas memórias </a>
+
+         
+    <div class="hearts"></div>
+
+    <script>
+        const btn = document.querySelector('.btn');
+        const heartsContainer = document.querySelector('.hearts');
+
+        btn.addEventListener('mouseenter', () => {
+            for (let i = 0; i < 10; i++) {
+                const heart = document.createElement('span');
+                heart.classList.add('heart');
+                heart.textContent = '❤️';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (1 + Math.random() * 1.5) + 's';
+                heartsContainer.appendChild(heart);
+
+                
+                setTimeout(() => heart.remove(), 2000);
+            }
+        });
+    </script>
+    </div>
+</body>
+</html>

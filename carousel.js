@@ -17,11 +17,3 @@ function showSlide(n) {
     slides[slideIndex].style.display = "block";
 }
 
-const buttons = document.querySelectorAll('.prev, .next');
-
-buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        btn.classList.add('pulse');
-        setTimeout(() => btn.classList.remove('pulse'), 300);
-    });
-});
